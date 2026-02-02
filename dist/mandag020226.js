@@ -68,24 +68,28 @@ console.log("add two objects with values into an Array", peopleAnother);
 //Create a Student Class:
 //Define a Student class with properties: name, id, and grades (an array of numbers).
 var Student = /** @class */ (function () {
-    function Student(id, name, grades) {
+    function Student(id, studentName, grades) {
         this.id = id;
-        this.name = name;
+        this.studentName = studentName;
         this.grades = grades;
     }
+    //Add Grades:
+    //Write a method named addGrade that takes a grade (number) as parameter, and adds the grade to the student's grades array.
+    Student.prototype.addGrade = function (grade) {
+        this.grades.push(grade);
+    };
     return Student;
 }());
-var student1 = new Student(1, "name1", [7, 4]);
-//Add Grades:
-//Write a method named addGrade that takes a grade (number) as parameter, and adds the grade to the student's grades array.
-addGrade(grades);
-{
-    this.grades.push(7);
-}
+var student1 = new Student(1, "navn1", [4, 10]);
 //Update Student Name:
 //Write a function named updateStudentName that takes a new name as parameter and updates the student's name.
+function updateStudentName(newStudentName) {
+    student1.studentName = newStudentName;
+    return student1.studentName;
+}
 //Test the Functions:
 //Create a student object.
 //Add a few grades to the student.
 //Update the student's name and print the updated object.
+console.log("test and running the method and function", student1.addGrade(7), updateStudentName("nyt navn"), student1);
 //# sourceMappingURL=mandag020226.js.map

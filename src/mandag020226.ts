@@ -88,27 +88,39 @@ console.log("add two objects with values into an Array", peopleAnother);
 
 class Student {
   id: number;
-  name: string;
+  studentName: string;
   grades: number[]; // dette skal nok laves om til en Array
 
-  constructor(id: number, name: string, grades: number[]) {
+  constructor(id: number, studentName: string, grades: number[]) {
     this.id = id;
-    this.name = name;
+    this.studentName = studentName;
     this.grades = grades;
   }
-}
 
-let student1 = new Student(1,"name1",[7,4])
-//Add Grades:
-//Write a method named addGrade that takes a grade (number) as parameter, and adds the grade to the student's grades array.
-addGrade(grades) {
-    this.grades.push(7)
+  //Add Grades:
+  //Write a method named addGrade that takes a grade (number) as parameter, and adds the grade to the student's grades array.
+
+  addGrade(grade: number) {
+    this.grades.push(grade);
+  }
 }
+let student1 = new Student(1, "navn1", [4, 10]);
 
 //Update Student Name:
 //Write a function named updateStudentName that takes a new name as parameter and updates the student's name.
+
+function updateStudentName(newStudentName: string): string {
+  student1.studentName = newStudentName;
+  return student1.studentName;
+}
 
 //Test the Functions:
 //Create a student object.
 //Add a few grades to the student.
 //Update the student's name and print the updated object.
+console.log(
+  "test and running the method and function",
+  student1.addGrade(7),
+  updateStudentName("nyt navn"),
+  student1,
+);
