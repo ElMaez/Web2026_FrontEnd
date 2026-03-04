@@ -5,37 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mandag D.02.02.26</title>
     <script src="/dist/mandag230226.js" defer></script>
+    <script src="/__navigation.js"></script>
+
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li>
-            <a href="/mandag020226.html">Mandag d.02.02.26 - Exercise</a>
-          </li>
-          <li>
-            <a href="/mandag230226.html">Mandag d.23.02.26 - DOM events</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="https://github.com/ckirschberg/baseline-ts-project"
-              >Extra project (åben projectet seperat i vsCode, kør npm run dev i
-              terminalen)</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/ckirschberg/baseline-ts-project"
-              >- forked from Github</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <header><nav></nav></header>
     <main id="man230226">
       <h1>Mandag d.23.02.26 - DOM events</h1>
       <article>
@@ -45,8 +22,16 @@
           <button id="button">Hover over meeee! :D</button>
           <div id="message" class="hidden">I am message! :O</div>
         </section>
-        <section>
+        <section id="assignment3">
           <h2>Assignment 3: I'm a Todo!</h2>
+          <div>
+            <input
+              id="assignment3_input"
+              type="text"
+              placeholder="add to list"
+            />
+            <button id="add_btn">Add</button>
+          </div>
           <ul id="todoBox"></ul>
         </section>
       </article>

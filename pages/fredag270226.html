@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fredag d.27.02.26</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <script src="/__navigation.js"></script>
+    <script src="/dist/fredag270226.js" defer></script>
+  </head>
+  <body>
+    <header><nav></nav></header>
+    <main>
+      <h1>Fredag d.27.02.26</h1>
+      <section><h2>Date: Exercise</h2></section>
+      <section>
+        <h2>Forms: Exercise</h2>
+        <form id="formUser">
+          <input placeholder="firstname" id="firstname" type="text" />
+          <input placeholder="lastname" id="lastname" type="text" />
+          <input placeholder="email" id="email" type="email" />
+          <input placeholder="password" id="password" type="password" />
+
+          <ul id="errors"></ul>
+
+          <button>Gem bruger</button>
+        </form>
+      </section>
+      <section>
+        <button id="btnJoke">Get joke</button>
+        <div id="divText" class="hidden">Her er noget tekst</div>
+
+        <div id="userContainer"></div>
+
+        <template id="template">
+          <div class="user">
+            <p id="name"></p>
+            <p id="email"></p>
+            <p id="password"></p>
+            <hr />
+          </div>
+        </template>
+      </section>
+    </main>
+    <footer>I am footer! :D</footer>
+  </body>
+</html>

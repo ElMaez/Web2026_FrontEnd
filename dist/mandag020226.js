@@ -3,20 +3,19 @@
 // 2 parameters and uses console.log() to output the person's name.
 // Check that it works and is printed correctly.
 // over complicated
-var Person = /** @class */ (function () {
-    function Person(firstname, lastname) {
+class Person {
+    constructor(firstname, lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
     }
-    return Person;
-}());
-var person1 = new Person("Layla", "noget");
+}
+let person1 = new Person("Layla", "noget");
 console.log(" with constructor", person1);
 //simplified?
 function SimplePerson(firstname, lastname) {
     return firstname + " " + lastname;
 }
-var nameResult = SimplePerson("Hello", "World");
+const nameResult = SimplePerson("Hello", "World");
 console.log("simplified", nameResult);
 //Excercise 2:
 // Create a typescript function that calculates the area of a rectangle.
@@ -26,7 +25,7 @@ function Rectangle(width, length) {
     //return result;
     return width * length;
 }
-var rectangleResult = Rectangle(2, 3);
+const rectangleResult = Rectangle(2, 3);
 console.log("rectangle Area", rectangleResult);
 //Excercise 3:
 //Create a typescript function that takes speed and time as 2 parameters and calculates and returns the distance.
@@ -35,11 +34,11 @@ console.log("rectangle Area", rectangleResult);
 function Distance(speed, time) {
     return speed * time;
 }
-var distanceResult = Distance(3, 3);
+const distanceResult = Distance(3, 3);
 console.log("You have travelled" + " " + distanceResult + " " + "km");
 //Array Exercises
 //Create an array with 5 names. Print out the first element (name) using console.log()
-var names = ["Hej", "med", "dig", "!", "?"];
+let names = ["Hej", "med", "dig", "!", "?"];
 console.log("array names index 0", names[0]);
 //Use the indexOf function to get the index of a name that exists in your array.
 console.log("indexOf dig", names.indexOf("dig"));
@@ -52,7 +51,7 @@ console.log(names);
 console.log(names.slice(3));
 //Create 2 objects with firstname, lastname, email – values. Add the two objects to a new array.
 // 'log' the array to verify. Also 'log' the first objects' email in a separate 'log'.
-var peopleAnother = [];
+let peopleAnother = [];
 peopleAnother.push({
     fistname: "FirstNavn1",
     lastname: "LastName1",
@@ -67,20 +66,19 @@ console.log("add two objects with values into an Array", peopleAnother);
 //Exercise: Student Grades Management
 //Create a Student Class:
 //Define a Student class with properties: name, id, and grades (an array of numbers).
-var Student = /** @class */ (function () {
-    function Student(id, studentName, grades) {
+class Student {
+    constructor(id, studentName, grades) {
         this.id = id;
         this.studentName = studentName;
         this.grades = grades;
     }
     //Add Grades:
     //Write a method named addGrade that takes a grade (number) as parameter, and adds the grade to the student's grades array.
-    Student.prototype.addGrade = function (grade) {
+    addGrade(grade) {
         this.grades.push(grade);
-    };
-    return Student;
-}());
-var student1 = new Student(1, "navn1", [4, 10]);
+    }
+}
+let student1 = new Student(1, "navn1", [4, 10]);
 //Update Student Name:
 //Write a function named updateStudentName that takes a new name as parameter and updates the student's name.
 function updateStudentName(newStudentName) {

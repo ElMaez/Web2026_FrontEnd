@@ -55,4 +55,37 @@ nav ul li a:hover {
   .hidden {
     display: none;
   }
+
+  #assignment3 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+
+    h2 {
+      grid-column: 1/-1;
+    }
+    div {
+      display: flex;
+      height: 25px;
+      grid-column: 1/2;
+      grid-row: span 1;
+    }
+
+    div input {
+      padding: 0.2rem;
+    }
+    #todoBox {
+      grid-column: 2/-1;
+      grid-row: auto;
+      border: solid 3px #2b2a29;
+      border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    }
+    #todoBox li {
+      list-style: disc;
+      grid-column: 2;
+      margin-left: 2rem;
+      background-color: red;
+    }
+  }
 }
